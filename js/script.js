@@ -108,7 +108,7 @@ const specificInfo = async function (repoName) {
 	repoInfoDisplay(repoInfo, languages);
 };
 
-//Creates display for specific rpo items//
+//Creates display for specific repo items//
 const repoInfoDisplay = function (
 	repoInfo,
 	languages
@@ -124,7 +124,7 @@ const repoInfoDisplay = function (
     <p>Languages: ${languages.join(', ')}</p>
     <a class="visit" href="https:github.com/${username}/${
 		repoInfo.name
-	}.git" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>`;
+	}" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>`;
 	repoData.append(div);
 	repoData.classList.remove('hide');
 	reposClass.classList.add('hide');
