@@ -1,4 +1,4 @@
-///////////Declared Variables/////
+///Declared Variables///
 //Div where profile information will appear//
 const bigPicture =
 	document.querySelector('.overview');
@@ -22,7 +22,7 @@ const filterInput = document.querySelector(
 	'.filter-repos'
 );
 
-/////////////Functions to poulate the bio section (class=overview)///////////
+///Functions to poulate the bio section (class=overview)///
 //Connects page to Git Hub API//
 const getInfo = async function () {
 	const results = await fetch(
@@ -53,7 +53,7 @@ const displayInfo = function (data) {
 //Calls getInfo() function//
 getInfo();
 
-/////////Functions to populate the list of repositories (class=repo-list)//////////////
+///Functions to populate the list of repositories (class=repo-list)///
 //Fetches Repos//
 const getRepos = async function () {
 	const results = await fetch(
@@ -75,7 +75,7 @@ const displayRepos = function (repos) {
 	});
 };
 
-////////////////////Supplies Repo Information//////////
+///Supplies Repo Information///
 //Event Listener for calling repo information//
 const repoList =
 	document.querySelector('.repo-list');
@@ -141,7 +141,7 @@ backToGallery.addEventListener(
 	}
 );
 
-//
+//Allows for dynamic search bar//
 filterInput.addEventListener(
 	'input',
 	function (e) {
