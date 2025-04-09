@@ -122,7 +122,7 @@ const repoInfoDisplay = function (
 			repoInfo.default_branch
 		}</p>
     <p>Languages: ${languages.join(', ')}</p>
-    <a class="visit" href="https:github.com/${username}/${
+    <a class="visit" href="https://github.com/${username}/${
 		repoInfo.name
 	}" target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>`;
 	repoData.append(div);
