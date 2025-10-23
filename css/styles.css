@@ -209,7 +209,7 @@ section.repo-data {
 
 .repo-data .visit {
     text-decoration: none;
-    max-width: 200px;
+    max-width: 250px;
     color: #162a41;
     padding: 0.75em;
     margin-top: 2em;
@@ -220,8 +220,15 @@ section.repo-data {
     border-radius: 30px;
 }
 
-.repo-data .visit:hover {
+.repo-data .visit p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.repo-data .visit p:hover {
     background-color: #67c5de;
+    border-radius: 30px;
 }
 
 .button-container {
@@ -229,10 +236,11 @@ section.repo-data {
     background-color: #fff;
     padding-left: 2em;
     padding-bottom: 2em;
+    border-radius: 0 0 20px 20px;
 }
 
 .view-repos {
-    max-width: 200px;
+    max-width: 250px;
     padding: 0.75em;
     margin-top: 0;
     background-color: #fff;
@@ -240,8 +248,14 @@ section.repo-data {
     border-radius: 30px;
 }
 
-.view-repos:hover {
+.view-repos p {
+    margin: 0;
+    padding: 10px;
+}
+
+.view-repos p:hover {
     background-color: #67c5de;
+    border-radius: 30px;
 }
 
 @media (min-width: 700px) {

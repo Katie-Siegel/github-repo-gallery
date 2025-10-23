@@ -124,7 +124,7 @@ const repoInfoDisplay = function (
     <p>Languages: ${languages.join(', ')}</p>
     <a class="visit" href='https://github.com/${username}/${
 		repoInfo.name
-	}' target="_blank" rel="noreferrer noopener">View Repo on GitHub!</a>`;
+	}' target="_blank" rel="noreferrer noopener"><p>View Repo on GitHub!</p></a>`;
 	repoData.append(div);
 	repoData.classList.remove('hide');
 	reposClass.classList.add('hide');
