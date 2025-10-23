@@ -41,10 +41,10 @@ const displayInfo = function (data) {
     <img alt="user avatar" src=${data.avatar_url} />
   </figure>
   <div>
-    <p><strong>Name:</strong> ${data.name}</p>
-    <p><strong>Bio:</strong> ${data.bio}</p>
-    <p><strong>Location:</strong> ${data.location}</p>
-    <p><strong>Number of public repos:</strong> ${data.public_repos}</p>
+    <p><strong><span>Name:</span></strong> ${data.name}</p>
+    <p><strong><span>Bio:</span></strong> ${data.bio}</p>
+    <p><strong><span>Location:</span></strong> ${data.location}</p>
+    <p><strong><span>Number of public repos:</span></strong> ${data.public_repos}</p>
   </div>`;
 	bigPicture.append(div);
 	getRepos();

@@ -7,8 +7,8 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
-    font-family: "Open Sans", sans-serif;
-    background-color: #fbf9de;
+    font-family: "Noto Sans", sans-serif;
+    background-color: #d1be9c;
     color: #333;
     font-size: 16px;
 }
@@ -27,7 +27,7 @@ body {
 }
 
 .fa-github-alt {
-    color: #f86d58;
+    color: #c65098;
 }
 
 img {
@@ -41,12 +41,16 @@ h1 {
     margin: 0;
     font-size: 3.5em;
     text-align: center;
-    font-family: "Oswald", sans-serif;
-    background-color: #483978;
+    font-family: "Poppins", sans-serif;
+    background-color: #162a41;
     color: #fff;
     text-transform: uppercase;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+span {
+    color: #c65098;
 }
 
 .badge {
@@ -80,7 +84,7 @@ h1 {
 h3 {
     width: 100%;
     text-align: center;
-    color: #f86d58;
+    color: #162a41;
 }
 
 ul {
@@ -107,7 +111,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #483978;
+    background-color: #162a41;
     color: white;
     font-size: 18px;
     padding-bottom: 2em;
@@ -135,7 +139,7 @@ ul {
     width: 100%;
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid #9b8dc9;
+    border-bottom: 1px solid #67c5de;
     padding-bottom: 19px;
 }
 
@@ -173,7 +177,8 @@ section.repo-data {
 .repo-list li {
     width: 90%;
     margin: 1em 0;
-    border: 1px solid #f86d58;
+    border: 1px solid #162a41;
+    border-radius: 30px;
     padding: 0.5em;
 }
 
@@ -184,8 +189,9 @@ section.repo-data {
 }
 
 .repo-list h3:hover {
-    background-color: #eee9ff;
-    cursor: pointer;
+    background-color: #67c5de;
+    border-radius: 30px;
+    cursor:grab;
 }
 
 .repo-list p {
