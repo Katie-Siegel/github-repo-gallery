@@ -1,4 +1,4 @@
-///////////Declared Variables/////
+///Declared Variables///
 //Div where profile information will appear//
 const bigPicture =
 	document.querySelector('.overview');
@@ -22,7 +22,7 @@ const filterInput = document.querySelector(
 	'.filter-repos'
 );
 
-/////////////Functions to poulate the bio section (class=overview)///////////
+///Functions to poulate the bio section (class=overview)///
 //Connects page to Git Hub API//
 const getInfo = async function () {
 	const results = await fetch(
@@ -41,10 +41,10 @@ const displayInfo = function (data) {
     <img alt="user avatar" src=${data.avatar_url} />
   </figure>
   <div>
-    <p><strong>Name:</strong> ${data.name}</p>
-    <p><strong>Bio:</strong> ${data.bio}</p>
-    <p><strong>Location:</strong> ${data.location}</p>
-    <p><strong>Number of public repos:</strong> ${data.public_repos}</p>
+    <p><strong><span>Name:</span></strong> ${data.name}</p>
+    <p><strong><span>Bio:</span></strong> ${data.bio}</p>
+    <p><strong><span>Location:</span></strong> ${data.location}</p>
+    <p><strong><span>Number of public repos:</span></strong> ${data.public_repos}</p>
   </div>`;
 	bigPicture.append(div);
 	getRepos();
@@ -53,7 +53,7 @@ const displayInfo = function (data) {
 //Calls getInfo() function//
 getInfo();
 
-/////////Functions to populate the list of repositories (class=repo-list)//////////////
+///Functions to populate the list of repositories (class=repo-list)///
 //Fetches Repos//
 const getRepos = async function () {
 	const results = await fetch(
@@ -75,7 +75,7 @@ const displayRepos = function (repos) {
 	});
 };
 
-////////////////////Supplies Repo Information//////////
+///Supplies Repo Information///
 //Event Listener for calling repo information//
 const repoList =
 	document.querySelector('.repo-list');
@@ -108,7 +108,7 @@ const specificInfo = async function (repoName) {
 	repoInfoDisplay(repoInfo, languages);
 };
 
-//Creates display for specific rpo items//
+//Creates display for specific repo items//
 const repoInfoDisplay = function (
 	repoInfo,
 	languages
@@ -139,7 +139,7 @@ backToGallery.addEventListener(
 	}
 );
 
-//
+//Allows for dynamic search bar//
 filterInput.addEventListener(
 	'input',
 	function (e) {
