@@ -210,18 +210,18 @@ section.repo-data {
 .repo-data .visit {
     text-decoration: none;
     max-width: 200px;
-    color: #fff;
+    color: #162a41;
     padding: 0.75em;
     margin-top: 2em;
     cursor: pointer;
     display: block;
-    background-color: #483978;
-    border: 1px solid #483978;
+    background-color: #fff;
+    border: 3px solid #162a41;
+    border-radius: 30px;
 }
 
 .repo-data .visit:hover {
-    background-color: #2f2550;
-    border: 1px solid #ccc;
+    background-color: #67c5de;
 }
 
 .button-container {
@@ -234,6 +234,13 @@ section.repo-data {
 .view-repos {
     max-width: 200px;
     margin-top: 0;
+    background-color: #fff;
+    border: 3px solid #162a41;
+    border-radius: 30px;
+}
+
+.view-repos:hover {
+    background-color: #67c5de;
 }
 
 @media (min-width: 700px) {
