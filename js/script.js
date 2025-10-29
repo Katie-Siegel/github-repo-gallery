@@ -1,29 +1,25 @@
-///Declared Variables///
-//Div where profile information will appear//
 const bigPicture =
 	document.querySelector('.overview');
-//Information to include in bigPicture//
+
 const username = 'Katie-Siegel';
-//Div where repos will be displayed//
+
 const reposDisplay =
 	document.querySelector('.repo-list');
-//Selects class=repos//
+
 const reposClass =
 	document.querySelector('.repos');
-//Displays individual repo data//
+
 const repoData =
 	document.querySelector('.repo-data');
-//Selects the Back to Repo Gallery button//
+
 const backToGallery = document.querySelector(
 	'.view-repos'
 );
-//Selects the input box for search function//
+
 const filterInput = document.querySelector(
 	'.filter-repos'
 );
 
-///Functions to poulate the bio section (class=overview)///
-//Connects page to Git Hub API//
 const getInfo = async function () {
 	const results = await fetch(
 		`https://api.github.com/users/${username}`
@@ -33,7 +29,6 @@ const getInfo = async function () {
 	displayInfo(data);
 };
 
-//Displays the results of getInfo() on the page//
 const displayInfo = function (data) {
 	let div = document.createElement('div');
 	div.classList.add('user-info');
@@ -50,11 +45,8 @@ const displayInfo = function (data) {
 	getRepos();
 };
 
-//Calls getInfo() function//
 getInfo();
 
-///Functions to populate the list of repositories (class=repo-list)///
-//Fetches Repos//
 const getRepos = async function () {
 	const results = await fetch(
 		`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`
@@ -64,7 +56,6 @@ const getRepos = async function () {
 	displayRepos(data);
 };
 
-//Displays the results of getRepos() on the page//
 const displayRepos = function (repos) {
 	filterInput.classList.remove('hide');
 	repos.forEach(function (repo) {
@@ -75,8 +66,6 @@ const displayRepos = function (repos) {
 	});
 };
 
-///Supplies Repo Information///
-//Event Listener for calling repo information//
 const repoList =
 	document.querySelector('.repo-list');
 
@@ -87,7 +76,6 @@ repoList.addEventListener('click', function (e) {
 	}
 });
 
-//Function for collecting the specific information needed for each repo//
 const specificInfo = async function (repoName) {
 	const results = await fetch(
 		`https://api.github.com/repos/${username}/${repoName}`
@@ -108,7 +96,6 @@ const specificInfo = async function (repoName) {
 	repoInfoDisplay(repoInfo, languages);
 };
 
-//Creates display for specific repo items//
 const repoInfoDisplay = function (
 	repoInfo,
 	languages
@@ -129,7 +116,6 @@ const repoInfoDisplay = function (
 	backToGallery.classList.remove('hide');
 };
 
-//Resets page back to repo list when Back to Repo Gallery button is selected//
 backToGallery.addEventListener(
 	'click',
 	function (e) {
@@ -139,7 +125,6 @@ backToGallery.addEventListener(
 	}
 );
 
-//Allows for dynamic search bar//
 filterInput.addEventListener(
 	'input',
 	function (e) {
