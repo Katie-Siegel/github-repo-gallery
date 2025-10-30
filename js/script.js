@@ -25,7 +25,6 @@ const getInfo = async function () {
 		`https://api.github.com/users/${username}`
 	);
 	const data = await results.json();
-	console.log(data);
 	displayInfo(data);
 };
 
@@ -52,7 +51,6 @@ const getRepos = async function () {
 		`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`
 	);
 	const data = await results.json();
-	console.log(data);
 	displayRepos(data);
 };
 
@@ -81,18 +79,15 @@ const specificInfo = async function (repoName) {
 		`https://api.github.com/repos/${username}/${repoName}`
 	);
 	const repoInfo = await results.json();
-	console.log(repoInfo);
 	const fetchLanguages = await fetch(
 		`https://api.github.com/repos/${username}/${repoName}/languages`
 	);
 	const languageData =
 		await fetchLanguages.json();
-	console.log(languageData);
 	let languages = [];
 	for (let item in languageData) {
 		languages.push(item);
 	}
-	console.log(languages);
 	repoInfoDisplay(repoInfo, languages);
 };
 
@@ -129,7 +124,6 @@ filterInput.addEventListener(
 	'input',
 	function (e) {
 		const search = e.target.value;
-		console.log(search);
 		let repos =
 			document.querySelectorAll('.repo');
 		let searchLower = search.toLowerCase();

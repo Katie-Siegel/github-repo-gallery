@@ -187,7 +187,7 @@ section.repo-data {
     padding: 10px;
 }
 
-.repo-list h3:hover {
+.repo-list li:hover {
     background-color: #67c5de;
     border-radius: 30px;
     cursor:grab;
@@ -221,11 +221,10 @@ section.repo-data {
 
 .repo-data .visit p {
     margin: 0;
-    padding: 10px;
     text-align: center;
 }
 
-.repo-data .visit p:hover {
+.repo-data .visit:hover {
     background-color: #67c5de;
     border-radius: 30px;
 }
@@ -247,12 +246,12 @@ section.repo-data {
     border-radius: 30px;
 }
 
-.view-repos p {
+.view-repos span {
     margin: 0;
-    padding: 10px;
+    color: #162a41;
 }
 
-.view-repos p:hover {
+.view-repos:hover {
     background-color: #67c5de;
     border-radius: 30px;
 }
